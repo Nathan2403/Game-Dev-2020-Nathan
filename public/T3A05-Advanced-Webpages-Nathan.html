@@ -1,12 +1,109 @@
 <h2 align-center>T3A05-Advanced-Webpages-Nathan.html</h2>
 
-Links to >= 3 HTML CSS and Form resources such as:
+Links to 3 HTML CSS and Form resources such as:
 <a href="https://www.w3schools.com/tags/default.asp">W3Schools HTML Reference</a>
 <hr>
 
 
 <form name="myFormName" id=myFormId" method="GET" action="aURL.com">
+First Name: <input type=text value="" placeholder="First Name"><br>
+Last Name: <input type=text value="" placeholder="Last Name"><br><br>
+Gender: Male<input type="radio" name="gender">|
+Female<input type="radio" name="gender">|
+Other<input type="radio" name="gender"><br><br>
+AC/DC: <input type="checkbox"><br><br>
+Password: <input id="myPassword" type="password" placeholder="Password"><br>
+Button: <input type="button" value="Show Password" onclick="{
+   alert('Your Password is: ' + document.getElementById('myPassword').value)
+}"><br><br>
+<textarea rows=6 cols=10 wrap>
+This is a textbox that you can modify the size of
+</textarea>
+<br><br>
+Select a Sound
+<select size=1>
+  <option value='A'> Eh
+  <option value='B'> Bee
+  <option value='C'> Sea
+</select>
+<br><br>
+
 
 
 <input type="submit"><input type="reset">
 </form>
+
+<hr>
+
+<iframe src="" width="90%" height="50px"></iframe><br><br>
+
+<b style="color:white; background-color:black">This is bold,</b>
+this isn't.<br><br>
+
+
+<input type=button value=move onclick="{
+  document.getElementById('myImg01').style.left= 
+parseInt(document.getElementById('myImg01').style.left) + 10
+}"><br>
+
+<img id="myImg01" img width=100 src="myImg01" style="position:relative; left:0; top:0"> <br><br>
+
+
+<head>
+<style>
+div {
+  margin: 1px;
+  border: 1px solid red;
+}
+
+man {
+  margin: 70px;
+  border: 1px solid red;
+  padding: 5px 10px 5px;
+}
+
+boy {
+  margin: 70px;
+  border: 1px solid red;
+}
+
+bruh {
+  margin: 70px;
+  border: 5px double purple;
+  padding: 5px 10px 5px;
+
+}
+
+Huh {
+  margin: 70px;
+  border: 5px double purple;
+  padding: 5px 10px 5px;
+  outline-style: double;
+  outline-color: purple;
+
+}
+
+Hoy {
+  margin: 70px;
+  border: 5px double purple;
+  padding: 5px 10px 5px;
+  outline-style: double;
+  outline-color: purple;
+  font-family: "Lucida Console", Lucida, Monospace;
+
+}
+</style>
+</head>
+<body>
+
+<div>Can we get a margin in here and have the border fit the text?</div><br>
+
+<boy>Thanks, but could we get some padding?</boy><br><br>
+
+<man> Great, but how about a better border?</man><br><br><br>
+
+<bruh> Lovely, but an outline would be nice </bruh><br><br><br>
+
+<Huh> Boy, that sure is nice, but what about a font? </Huh><br><br><br>
+
+<Hoy> I think I liked the other font better</Hoy>
