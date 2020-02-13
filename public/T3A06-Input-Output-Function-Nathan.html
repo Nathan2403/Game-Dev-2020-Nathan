@@ -1,9 +1,10 @@
 <h1 align=center>T3A06 Input Output Function Nathan.html</h1>
 
-<input id="myText01" type=text value="Nathan">
+<input id="myText01" type=text value="" placeholder=...>
 <input type="button" value="Show 1" onclick="{
 
 myInput1= document.getElementById('myText01').value
+
    document.getElementById('myDiv01').innerHTML = 'myText01 = ' + myInput1
 }">
 <div id="myDiv01"></div> 
@@ -18,7 +19,10 @@ myInput1= document.getElementById('myText01').value
 <input id="myName02" type=text value="" placeholder="Last Name">
 <input type="button" value="Full Name" onclick="{
 
-   document.getElementById('myDiv02').innerHTML = document.getElementById('myName01').value + document.getElementById('myName02').value
+myName1= document.getElementById('myName01').value
+myName2= document.getElementById('myName02').value
+
+   document.getElementById('myDiv02').innerHTML = myName1 + ' ' + myName2
 }">
 
 <div id="myDiv02"></div>
