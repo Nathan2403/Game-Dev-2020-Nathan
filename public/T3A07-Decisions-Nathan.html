@@ -45,9 +45,10 @@
 }
    else if(x==9){document.getElementById('myDiv01').innerHTML += '<br>It is 9, input was '+ x
 }
-   else if(x!=0){document.getElementById('myDiv01').innerHTML += '<br>It is not a single digit number, input was '+ x
+   else if(x>=9){document.getElementById('myDiv01').innerHTML += '<br>It is higher than 9, input was '+ x
 }
-
+   else if(x<=-9){document.getElementById('myDiv01').innerHTML += '<br>It is lower than -9, input was '+ x
+}
 }">
 
 <div id="myDiv01">   </div>
