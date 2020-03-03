@@ -1,0 +1,27 @@
+<h1 align=center>T3A11 Objects by Nathan</h1>
+
+<input type = text id= myText01 value= Nathan>
+<input type = button value = "Show Object" onclick="{
+myObject = {
+   'myName' : document.getElementById('myText01').value,
+   'myHairColour' : 'Blonde',
+   'myAge' : '17',
+}
+
+   document.getElementById('myDiv01').innerHTML = '<br>Age : ' + myObject.myAge + '<br> Name : ' + myObject.myName + '<br> Hair Colour : ' +myObject.myHairColour
+}">
+
+<div id="myDiv01"></div>
+
+<br><br>
+
+<input type = button value = "Show Array of Objects" onclick="{
+
+let myAoO = {x:30, y:20,
+    name : 'John', lastname : 'Smith',
+    eyeColour : 'blue', hairColour : 'blonde'}
+
+   document.getElementById('myDiv02').innerHTML = '<br><b>Name :</b> '+myAoO.name + ', <b>Last Name :</b> '+myAoO.lastname + '<br><b>Eye Colour :</b> '+myAoO.eyeColour + ', <b>Hair Colour :</b> '+ myAoO.hairColour +'<br><b>x :</b> '+myAoO.x+', <b>y :</b> ' +myAoO.y
+}">
+
+<div id="myDiv02"></div>
