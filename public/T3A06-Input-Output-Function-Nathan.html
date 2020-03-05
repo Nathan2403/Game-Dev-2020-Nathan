@@ -33,19 +33,17 @@ myName2= document.getElementById('myName02').value
 
 <br><br>
 
-<input id="myNumber01" type=text value="3" placeholder="1"> +
-<input id="myNumber02" type=text value="2" placeholder="2"> +
-<input id="myNumber03" type=text value="0" placeholder="3"> +
-<input id="myNumber04" type=text value="0" placeholder="4">
+<input id="myNumber01" type=text value="3">
+<input id="myNumber02" type=text value="2"> 
+
 
 <input type="button" value="Add" onclick="{
 
-myNumber1= document.getElementById('myNumber01').value
-myNumber2= document.getElementById('myNumber02').value
-myNumber3= document.getElementById('myNumber03').value
-myNumber4= document.getElementById('myNumber04').value
+myN1 = document.getElementById('myNumber01').value
+myN2 = document.getElementById('myNumber02').value
 
-   document.getElementById("myDiv03").innerHTML = myNumber1 + myNumber2
+
+   document.getElementById("myDiv03").innerHTML = myN1 + ' ' +myN2
 }">
 
 
