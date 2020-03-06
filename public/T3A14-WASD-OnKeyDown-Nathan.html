@@ -1,0 +1,27 @@
+<body onkeydown="{
+   document.all.myText01.value = event.key
+ 
+if (event.key =='d'){
+   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+}
+
+if (event.key =='s'){
+   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
+}
+
+if (event.key =='a'){
+   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10 + 'px'
+}
+
+
+if (event.key =='w'){
+   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px'
+}
+
+}">
+
+<h2 align = center>T3A14-WASD-OnKeyDown-Nathan.html</h2>
+
+<input id = "myText01" type=text value=0 size=6 > <br>
+
+<img src="myImage01.png" id="myImg01" style= "position:relative; z-index:-1; left:0px; top:100px; height:100px; width:100px;">
