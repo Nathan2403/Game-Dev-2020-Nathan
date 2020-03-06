@@ -1,44 +1,38 @@
-<h1 align=center>T3A13 Loop Count by Nathan</h1>
+<h1 align=center>T3A13-LoopCount-Nathan.html</h1>
 
-<input type = text id = 'myText01' value = 35>
-<input type= button value = Loop onclick="{
+<input type=text id=myText01>
 
-   x = document.getElementById('myText01').value
+<input type=button value=Loop onclick="{
 
-  document.getElementById('myDiv01').innerHTML = ' '
+	document.getElementById('myDiv01').innerHTML = ' '
 
-for (let myLoop = 0; myLoop<=x;myLoop++){
+myY=0
+myX=1
 
-   document.getElementById('myDiv01').innerHTML += myLoop + ' '
+for(myLoop01 = 0; myLoop01 <= document.getElementById('myText01').value; myLoop01++){
 
- if (myLoop == 0){
-   document.getElementById('myDiv01').innerHTML += '<br>'
-}	
- if (myLoop == 2){
-   document.getElementById('myDiv01').innerHTML += '<br>'
+	document.getElementById('myDiv01').innerHTML += myLoop01+ ' ' 
+		
+if(myLoop01 == 0){
+
+	document.getElementById('myDiv01').innerHTML += '<br>' 
+
+myX=myX+1
+myY=myY+myX
 }
-if (myLoop == 5){
-   document.getElementById('myDiv01').innerHTML += '<br>'
+if(myLoop01 == myY){
+
+	document.getElementById('myDiv01').innerHTML += '<br>' 
+
+myX=myX + 1
+myY=myX + myY
+
 }
-if (myLoop == 9){
-   document.getElementById('myDiv01').innerHTML += '<br>'
-}
-if (myLoop == 14){
-   document.getElementById('myDiv01').innerHTML += '<br>'
-}
-if (myLoop == 20){
-   document.getElementById('myDiv01').innerHTML += '<br>'
-}
-if (myLoop == 27){
-   document.getElementById('myDiv01').innerHTML += '<br>'
-}
-if (myLoop == 35){
-   document.getElementById('myDiv01').innerHTML += '<br>'
-}
+
 }
 
 }">
 
 <br><br>
 
-<div id="myDiv01"></div>
+<div id=myDiv01></div>
