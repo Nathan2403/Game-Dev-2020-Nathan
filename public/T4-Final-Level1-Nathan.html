@@ -1,6 +1,6 @@
 <h1 align=center>T4-Final-Level1-Nathan.html</h1>
 
-
+<h3 align=left><b style="color:white; left:15px"> Use WASD to Move</b></h3>
 
 
 
@@ -104,6 +104,42 @@ function myCheckHit(){
       document.getElementById('myImg01').style.left = '20px'
    }   
 
+   if ( myHitOther('myImg01','myImg10') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+   }   
+
+   if ( myHitOther('myImg01','myImg11') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '150px'
+   }   
+
+   if ( myHitOther('myImg01','myImg12') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '475px'
+   }   
+
+   if ( myHitOther('myImg01','myImg13') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '825px'
+   }   
+
+   if ( myHitOther('myImg01','myImg14') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.top = '20px'
+   }   
+
+   if ( myHitOther('myImg01','myImg15') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.top = '600px'
+   }   
+
+   if ( myHitOther('myImg01','myImg16') ){
+       //alert('you lose')
+      document.getElementById('myImg01').style.left = '20px'
+   }   
+
+
 
 
 
@@ -137,6 +173,10 @@ if ( myHitOther('myImg09','myImg05') ){
       document.getElementById('myImg09').style.left = '1250px'
    }   
 
+if ( myHitOther('myImg10','myImg05') ){
+       //alert('you lose')
+      document.getElementById('myImg10').style.left = '1250px'
+   }   
 
 
 
@@ -165,34 +205,8 @@ if ( myHitOther('myImg09','myImg05') ){
 
 
 
-<input type=button value="Auto Background Left" onclick="{
-  clearInterval(myClock)
-  let myTemp = '100px 0px'
-  myClock = setInterval(function(){
-      myGlobalX -= 5
-      myTemp =  myGlobalX + 'px 0px'
-      document.getElementById('myBody').style.backgroundPosition = myTemp
-  }, 100)
-    
-}">
 
-
-<input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-  myCheckHit()     // checks for all collisions
-}">
-
-<input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
-  myCheckHit()     // checks for all collisions
-}"><br><br>
-
-
-
-
-
-
-<input type=button value="Auto Shoot" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input type=button value="Start" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
 
   clearInterval(myTimer01)
   myTimer01 = setInterval(function(){
@@ -225,11 +239,16 @@ myTimer01 = setInterval(function(){
      myCheckHit()     
   }, 50)
 
+myTimer01 = setInterval(function(){
+     document.getElementById('myImg10').style.left = parseInt(document.getElementById('myImg10').style.left) - 10 + 'px'
+     myCheckHit()     
+  }, 50)
+
 }"><br><br>
 
 
 
-<img id="myImg01" src="images/imageedit_7_5689457403.gif"  style="position:absolute; width:50px; height:80px; left: 50px; top:190px;">
+<img id="myImg01" src="images/coolboy.gif"  style="position:absolute; width:50px; height:80px; left: 50px; top:190px;">
 
 <img id="myImg02" src="images/bullet_cartoon.png"  style="position:absolute; width:100px; height:40px; left:350px; top:300px;">
 
@@ -243,9 +262,22 @@ myTimer01 = setInterval(function(){
 
 <img id="myImg09" src="images/bullet_cartoon.png"  style="position:absolute; width:100px; height:40px; left:600px; top:200px;">
 
+<img id="myImg10" src="images/bullet_cartoon.png"  style="position:absolute; width:100px; height:40px; left:1000px; top:600px;">
 
 
 
 <img id="myImg04" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0PDw0NDQ0NDQ8NDQ0NDQ0NDQ8NDQ0NFREWFhURFRUYHSggGBolGxUVITEhMSkrOi4uFx8/ODMsNyg5LisBCgoKDQ0NFQ8PFS0dFR0rKy0tLSstLS0tLSsrLS0tKy03LSstMCs3LS0rLSsrLSs3Ny0rLS0tLTc3Ky0rLSsrK//AABEIAKgBLAMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIG/8QAGRABAQEAAwAAAAAAAAAAAAAAAAERMUHx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEG/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AOxgDEMUYYEAIAAABAAAAAAoAFRQAAAVAAUEBQQAAACgAAoCAAYGACyIAAABQBFEBayK0ioAqQAhTCgAAAABQAVAKAAAIAAACioAAAAaAqQAAAAAAEABSAAKhAFQAAEABSgAAAFAANBAAUBAUACBF9AJnaGlKAQAAAFBAAAMAAgAAgAAqAotRQRUAAABUAAAAACgAABAAAABQQgIACgqABoAAAAAKgBoAAAAqABAAAAAFEAAAAAKBgCoAAAAAqAAAiBQVUi0AAAABAAU0pQAgAAAEAAAAAAgQAVAAoAuIoIIqIAKALBUAARURFCCqAAAAAAVFAAAABFQBRUUEFxAAAVKAAKCLENBFRUQVBVAIABAABABAAUVAFFEoLSIAAAAQAFBF1AFtQAAAAAAAEVQQBEAFAAUoAKgUAAQAAAooAAACoAAAAACoAaAAUAABAFFEADRFiIBooUCAKgKFAAAQIAoKmAsEIAt4QgEAACLASgABoCpAgAABAAFQAARFgIAAAAAoCCiqIAgAKAAAAKAiAAQACigqACAABQAAAAAUBX/2Q=="  style="position:absolute; width:50px; height:695px; left:1316px; top:00px;">
 
 <img id="myImg05" src="myimg"  style="position:absolute; width:1px; height:695px; left:0px; top:0px;">
+
+<img id="myImg11" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP0AAADHCAMAAADlCqUFAAAAA1BMVEUCAloddjPcAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GxXIAARdOqd4AAAAASUVORK5CYII="  style="position:absolute; width:10px; height:500px; left:300px; top:0px;">
+
+<img id="myImg12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP0AAADHCAMAAADlCqUFAAAAA1BMVEUCAloddjPcAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GxXIAARdOqd4AAAAASUVORK5CYII="  style="position:absolute; width:10px; height:500px; left:650px; top:195px;">
+
+<img id="myImg13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP0AAADHCAMAAADlCqUFAAAAA1BMVEUCAloddjPcAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GxXIAARdOqd4AAAAASUVORK5CYII="  style="position:absolute; width:10px; height:500px; left:1000px; top:0px;">
+
+<img id="myImg14" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP0AAADHCAMAAADlCqUFAAAAA1BMVEUCAloddjPcAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GxXIAARdOqd4AAAAASUVORK5CYII="  style="position:absolute; width:1316px; height:10px; left:0px; top:0px;">
+
+<img id="myImg15" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP0AAADHCAMAAADlCqUFAAAAA1BMVEUCAloddjPcAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GxXIAARdOqd4AAAAASUVORK5CYII="  style="position:absolute; width:1316px; height:10px; left:0px; top:685px;">
+
+<img id="myImg16" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP0AAADHCAMAAADlCqUFAAAAA1BMVEUCAloddjPcAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8GxXIAARdOqd4AAAAASUVORK5CYII="  style="position:absolute; width:10px; height:695px; left:0px; top:0px;">
