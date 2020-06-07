@@ -92,6 +92,55 @@ function myCheckHit(){
     location = 'T4-Final-Level2-Nathan.html'
    }
 
+  if ( myHitOther('myImg01','myImg08') ){
+       alert('Try Again')
+      document.getElementById('myImg01').style.top = '20px'
+    location = 'T4-Final-Level2-Nathan.html'
+   }
+
+  if ( myHitOther('myImg04','myImg02') ){
+      document.getElementById('myImg04').style.top = '300px'
+   }
+
+  if ( myHitOther('myImg05','myImg02') ){
+      document.getElementById('myImg05').style.top = '300px'
+   }
+
+  if ( myHitOther('myImg06','myImg02') ){
+      document.getElementById('myImg06').style.top = '300px'
+   }
+
+  if ( myHitOther('myImg07','myImg02') ){
+      document.getElementById('myImg07').style.top = '300px'
+   }
+
+  if ( myHitOther('myImg08','myImg02') ){
+      document.getElementById('myImg08').style.top = '300px'
+   }
+
+ if ( myHitOther('myImg04','myImg03') ){
+      document.getElementById('myImg04').style.top = '300px'
+   }
+
+  if ( myHitOther('myImg05','myImg03') ){
+      document.getElementById('myImg05').style.top = '300px'
+   }
+
+  if ( myHitOther('myImg06','myImg03') ){
+      document.getElementById('myImg06').style.top = '300px'
+   }
+
+  if ( myHitOther('myImg07','myImg03') ){
+      document.getElementById('myImg07').style.top = '300px'
+   }
+
+  if ( myHitOther('myImg08','myImg03') ){
+      document.getElementById('myImg08').style.top = '300px'
+   }
+
+  if ( myHitOther('myImg01','myImg09') ){
+       alert('You Win!')
+   }
  }
 
 </script>
@@ -129,6 +178,17 @@ myTimer01 = setInterval(function(){
      document.getElementById('myImg07').style.left = parseInt(document.getElementById('myImg07').style.left) - 10 + 'px'
      myCheckHit()     
   }, 50)
+
+myTimer01 = setInterval(function(){
+     document.getElementById('myImg08').style.left = parseInt(document.getElementById('myImg08').style.left) - 10 + 'px'
+     myCheckHit()     
+  }, 50)
+
+myTimer01 = setInterval(function(){
+     document.getElementById('myImg09').style.left = parseInt(document.getElementById('myImg09').style.left) - 10 + 'px'
+     myCheckHit()     
+  }, 50)
+
 
 
 
@@ -173,6 +233,14 @@ myTimer01 = setInterval(function(){
      myCheckHit()     // checks for all collisions
   }, 50)
 
+  myTimer02 = setInterval(function(){
+     let my02x = Math.floor((Math.random() * 30) - 15) 
+     let my02y = Math.floor((Math.random() * 30) - 15) 
+     document.getElementById('myImg08').style.left = parseInt(document.getElementById('myImg08').style.left) + my02x + 'px'
+     document.getElementById('myImg08').style.top  = parseInt(document.getElementById('myImg08').style.top)  + my02y + 'px'
+     myCheckHit()     // checks for all collisions
+  }, 50)
+
 
 
 
@@ -192,4 +260,9 @@ myTimer01 = setInterval(function(){
 <img id="myImg06" src="images/thechicken.png"  style="position:absolute; width:150px; height:150px; left:2000px; top:300px;">
 
 <img id="myImg07" src="images/thechicken.png"  style="position:absolute; width:150px; height:150px; left:2500px; top:300px;">
+
+<img id="myImg08" src="images/thechicken.png"  style="position:absolute; width:150px; height:150px; left:3000px; top:300px;">
+
+
+<img id="myImg09" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0PDw0NDQ0NDQ8NDQ0NDQ0NDQ8NDQ0NFREWFhURFRUYHSggGBolGxUVITEhMSkrOi4uFx8/ODMsNyg5LisBCgoKDQ0NFQ8PFS0dFR0rKy0tLSstLS0tLSsrLS0tKy03LSstMCs3LS0rLSsrLSs3Ny0rLS0tLTc3Ky0rLSsrK//AABEIAKgBLAMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIG/8QAGRABAQEAAwAAAAAAAAAAAAAAAAERMUHx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEG/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AOxgDEMUYYEAIAAABAAAAAAoAFRQAAAVAAUEBQQAAACgAAoCAAYGACyIAAABQBFEBayK0ioAqQAhTCgAAAABQAVAKAAAIAAACioAAAAaAqQAAAAAAEABSAAKhAFQAAEABSgAAAFAANBAAUBAUACBF9AJnaGlKAQAAAFBAAAMAAgAAgAAqAotRQRUAAABUAAAAACgAABAAAABQQgIACgqABoAAAAAKgBoAAAAqABAAAAAFEAAAAAKBgCoAAAAAqAAAiBQVUi0AAAABAAU0pQAgAAAEAAAAAAgQAVAAoAuIoIIqIAKALBUAARURFCCqAAAAAAVFAAAABFQBRUUEFxAAAVKAAKCLENBFRUQVBVAIABAABABAAUVAFFEoLSIAAAAQAFBF1AFtQAAAAAAAEVQQBEAFAAUoAKgUAAQAAAooAAACoAAAAACoAaAAUAABAFFEADRFiIBooUCAKgKFAAAQIAoKmAsEIAt4QgEAACLASgABoCpAgAABAAFQAARFgIAAAAAoCCiqIAgAKAAAAKAiAAQACigqACAABQAAAAAUBX/2Q=="  style="position:absolute; width:50px; height:695px; left:4000px; top:00px;">
 
